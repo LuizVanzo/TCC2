@@ -96,7 +96,7 @@ class MemorialController extends Controller
     public function memorial(string $id)
     {
         $memorial = Memorial::where( 'cd_memorial', '=', $id)->first();
-        $memoria = Memoria::where( 'cd_memorial', '=', $id)->get();
+        $memoria = Memoria::where( 'cd_memorial', '=', $id)->orderBy('dt_memoria')->get();
         $membrosFamilia = Memorial::membrosFamilia($memorial->cd_familia, $memorial->cd_memorial);
 
         return Inertia::render( 'Perfil', [ 'memorial' => $memorial, 

@@ -5,7 +5,6 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { useState, useEffect } from 'react';
-import '../../../css/welcome.css';
 import ImageUploader from '../../Components/ImageUploader'; 
 
 export default function MemoriaForm({memorial, memoria}) {
@@ -47,11 +46,6 @@ export default function MemoriaForm({memorial, memoria}) {
 
     return (
         <AuthenticatedLayout
-            header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
-                    Criar Memoria
-                </h2>
-            }
         >
             <Head title="Adicionar Memória" />
 

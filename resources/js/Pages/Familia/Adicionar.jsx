@@ -5,7 +5,6 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { useState, useEffect } from 'react';
-import '../../../css/welcome.css';
 
 export default function FamiliaForm({familia}) {
     const isEditing = !!familia; // Verifica se está em modo de edição
@@ -39,13 +38,8 @@ export default function FamiliaForm({familia}) {
     };
 
     return (
-        <AuthenticatedLayout
-            header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
-                    Criar Família
-                </h2>
-            }
-        >
+        <AuthenticatedLayout>
+
             <Head title="Criar Família" />
 
             <div className="py-12">

@@ -5,7 +5,6 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { useState, useEffect } from 'react';
-import '../../css/welcome.css';
 import ImageUploader from '../Components/ImageUploader'; 
 
 export default function MemorialForm({memorial, familia}) {
@@ -49,11 +48,6 @@ export default function MemorialForm({memorial, familia}) {
 
     return (
         <AuthenticatedLayout
-            header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
-                    Criar Memorial
-                </h2>
-            }
         >
             <Head title="Adicionar Memória" />
 
@@ -110,7 +104,7 @@ export default function MemorialForm({memorial, familia}) {
                                 </div>
 
                                 <div className="mt-4">
-                                    <InputLabel htmlFor="cd_familia" value="Selecione um Membro da Família *" />
+                                    <InputLabel htmlFor="cd_familia" value="Selecione a Família *" />
                                     <select
                                         id="cd_familia"
                                         name="cd_familia"
@@ -120,7 +114,7 @@ export default function MemorialForm({memorial, familia}) {
                                         required
                                     >
                                         <option value="" disabled>
-                                            Selecione um membro da família
+                                            Selecione a Família
                                         </option>
                                         {familia.map((value, index) => (
                                             <option key={value.cd_familia} value={value.cd_familia || value.nm_familia}>
